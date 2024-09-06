@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class EstacionPeaje {
-    
+
     private String nombre;
     private String ciudad;
     private int totalRecaudado;
@@ -15,6 +15,22 @@ class EstacionPeaje {
         this.ciudad = ciudad;
         this.totalRecaudado = 0;
         this.veiculos = new ArrayList<>();
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
     }
 
     public void registrarVehiculo(Veiculo vehiculo) {
