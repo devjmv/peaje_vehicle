@@ -56,12 +56,24 @@ public class AppPeaje {
         estacionPeaje.registrarVehiculo(new Moto(placa));
     }
 
-    public void agregarCamion(Scanner scanner) {
+    public void agregarCamiodn(Scanner scanner) {
         System.out.print("Ingresa la placa del camion: ");
         String placa = scanner.nextLine();
         System.out.print("Ingresa la cantidad de ejes del camion: ");
         int ejes = Integer.parseInt(scanner.nextLine());
         estacionPeaje.registrarVehiculo(new Camion(placa, ejes));
+    }
+
+    public void agregarCamion(Scanner scanner) throws NumberFormatException {
+        System.out.print("Ingresa la placa del camion: ");
+        String placa = scanner.nextLine();
+        try {
+            System.out.print("Ingresa la cantidad de ejes del camion: ");
+            int ejes = Integer.parseInt(scanner.nextLine());
+            estacionPeaje.registrarVehiculo(new Camion(placa, ejes));
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
     }
 
     public void mostrarInforme() {
