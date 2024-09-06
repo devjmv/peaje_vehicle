@@ -56,14 +56,6 @@ public class AppPeaje {
         estacionPeaje.registrarVehiculo(new Moto(placa));
     }
 
-    public void agregarCamiodn(Scanner scanner) {
-        System.out.print("Ingresa la placa del camion: ");
-        String placa = scanner.nextLine();
-        System.out.print("Ingresa la cantidad de ejes del camion: ");
-        int ejes = Integer.parseInt(scanner.nextLine());
-        estacionPeaje.registrarVehiculo(new Camion(placa, ejes));
-    }
-
     public void agregarCamion(Scanner scanner) throws NumberFormatException {
         System.out.print("Ingresa la placa del camion: ");
         String placa = scanner.nextLine();
